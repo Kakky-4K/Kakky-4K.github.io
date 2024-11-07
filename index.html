@@ -50,11 +50,12 @@
 
     <div id="instruction">
         画像をタップしてください<br>
-        高画質画像に変化します
+        高画質画像に変化します<br><br>
+        テストが終わりです　と出るまで繰り返してください
     </div>
 
     <div id="dialog">
-        <p>遅く感じましたか？</p>
+        <p>画像が切り替わるのが遅く感じましたか？</p>
         <button id="yesButton">はい</button>
         <button id="noButton">いいえ</button>
     </div>
@@ -70,12 +71,12 @@
                 document.getElementById('image2').style.display = 'block';
                 setTimeout(() => {
                     document.getElementById('dialog').style.display = 'block';
-                }, 500);  // 画像2表示後、遅らせてダイアログを表示
+                }, 250);  // 画像2表示後、遅らせてダイアログを表示
             }, delayTime);
         });
 
         document.getElementById('yesButton').addEventListener('click', function() {
-            alert('あなたの遅延許容時間は: ' + delayTime + 'ミリ秒付近です');
+            alert('これでテストは終わりです。　あなたの許容待ち時間は: ' + delayTime + 'ミリ秒付近です');
             document.getElementById('dialog').style.display = 'none';
         });
 

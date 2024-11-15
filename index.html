@@ -62,7 +62,7 @@
 
     <script>
         let delayTime = 0;
-        const delayTimes = [0, 100, 250, 500, 750, 1000 , 1500, 2000];
+        const delayTimes = [0, 100, 250, 500, 750, 1000, 1500, 2000];
         let currentDelayIndex = 0;
 
         document.getElementById('image1').addEventListener('click', function() {
@@ -81,11 +81,16 @@
         });
 
         document.getElementById('noButton').addEventListener('click', function() {
-            currentDelayIndex = (currentDelayIndex + 1) % delayTimes.length;
-            delayTime = delayTimes[currentDelayIndex];
-            document.getElementById('image2').style.display = 'none';
-            document.getElementById('dialog').style.display = 'none';
-            document.getElementById('instruction').style.display = 'block';
+            if (delayTime === 2000) {
+                alert('これでテストは終わりです。　あなたの許容待ち時間は: 2000ミリ秒です');
+                document.getElementById('dialog').style.display = 'none';
+            } else {
+                currentDelayIndex = (currentDelayIndex + 1) % delayTimes.length;
+                delayTime = delayTimes[currentDelayIndex];
+                document.getElementById('image2').style.display = 'none';
+                document.getElementById('dialog').style.display = 'none';
+                document.getElementById('instruction').style.display = 'block';
+            }
         });
     </script>
 </body>

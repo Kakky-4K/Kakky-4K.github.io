@@ -80,13 +80,13 @@ font-style: italic;
         });
 
         document.getElementById('yesButton').addEventListener('click', function() {
-            alert('これでテストは終わりです。　あなたの許容待ち時間は　：' + delayTime + 'ミリ秒　付近です');
+            alert('これでテストは終わりです。\nあなたの許容待ち時間は　' + delayTime + 'ミリ秒　付近です');
             document.getElementById('dialog').style.display = 'none';
         });
 
         document.getElementById('noButton').addEventListener('click', function() {
             if (delayTime === 2000) {
-                alert('これでテストは終わりです。　あなたの許容待ち時間は：　2000ミリ秒『以上』　です');
+                alert('これでテストは終わりです。\nあなたの許容待ち時間は　2000ミリ秒『以上』　です');
                 document.getElementById('dialog').style.display = 'none';
             } else {
                 currentDelayIndex = (currentDelayIndex + 1) % delayTimes.length;

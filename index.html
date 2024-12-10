@@ -4,43 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>画像表示遅延テスト</title>
-    <style>
-        .image-container {
-            position: relative;
-            width: 95%;
-            margin: 0 auto;
-        }
-        #image1, #image2 {
-            width: 100%;
-            display: block;
-        }
-        #image2 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: none;
-        }
-        #dialog {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border: 1px solid black;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            text-align: center;
-        }
-        #dialog button {
-            margin: 10px;
-            padding: 5px 10px;
-        }
-        #instruction {
-            text-align: center;
-            margin-top: 10px;
-        }
-    </style>
+<style> body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; } .image-container {
+position: relative;
+width: 95%;
+margin: 20px auto;
+}
+#image1, #image2 {
+width: 100%;
+display: block;
+border: 1px solid #ddd;
+}
+#image2 {
+position: absolute;
+top: 0;
+left: 0;
+display: none;
+}
+#dialog {
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #f9f9f9;
+padding: 20px;
+border: 1px solid #ccc;
+text-align: center;
+}
+#dialog button {
+margin: 10px;
+padding: 5px 10px;
+background-color: #eee;
+border: 1px solid #ccc;
+cursor: pointer;
+}
+#instruction {
+text-align: center;
+margin-top: 20px;
+font-style: italic;
+}
+</style>
 </head>
 <body>
     <div class="image-container">

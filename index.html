@@ -54,11 +54,12 @@ font-style: italic;
     <div id="instruction">
         画像をタップしてください<br>
         高画質画像に変化します<br><br>
-        これでテストは終わりです<br><br>
+        テストが終わりです<br><br>
         と出るまで繰り返してください
     </div>
 
     <div id="dialog">
+    	 <p>(SNSでの画像の読み込みと考えると)</p>
         <p>画像が切り替わるのが遅く感じましたか？</p>
         <button id="yesButton">はい</button>
         <button id="noButton">いいえ</button>
@@ -80,13 +81,13 @@ font-style: italic;
         });
 
         document.getElementById('yesButton').addEventListener('click', function() {
-            alert('これでテストは終わりです。\nあなたの許容待ち時間は　' + delayTime + 'ミリ秒　付近です');
+            alert('これでテストは終わりです。　あなたの許容待ち時間は　：' + delayTime + 'ミリ秒　付近です');
             document.getElementById('dialog').style.display = 'none';
         });
 
         document.getElementById('noButton').addEventListener('click', function() {
             if (delayTime === 2000) {
-                alert('これでテストは終わりです。\nあなたの許容待ち時間は　2000ミリ秒『以上』　です');
+                alert('これでテストは終わりです。　あなたの許容待ち時間は：　2000ミリ秒『以上』　です');
                 document.getElementById('dialog').style.display = 'none';
             } else {
                 currentDelayIndex = (currentDelayIndex + 1) % delayTimes.length;
